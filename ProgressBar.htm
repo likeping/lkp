@@ -1,0 +1,21 @@
+﻿<html>
+<head>
+<title></title>
+<script>
+    function $(id) { return document.getElementById(id); }
+    function setPos(pos) {
+        $('ProgressBar').style.width = pos+'%';
+        $('ProgressBar').innerHTML = pos+'%';
+    }
+    function showTip(msg) {
+        $('Msg1').innerHTML = msg;
+    }
+</script>
+</head>
+<body>
+<div id="Msg1" style="font-family: 宋体, Arial, Helvetica, sans-serif; font-size: 14px; color: #ea9b02; font-weight: bold">正在加载...</div>
+<div id="ProgressBarSide" style="color:Silver;border-width:1px;border-style:Solid;width:300px;">
+     <div id="ProgressBar" style="background-color:#3366FF; height:21px; width:0%; color: #FFFFFF; font-weight: bold; padding-left: 5px;"></div>
+</div>
+</body>
+</html>

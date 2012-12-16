@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Site xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" LimitNum="0">
+  <Name>Test</Name>
+  <URLs>
+    <string>http://www.jkhz.com/tuku/cosplay/list_80_1.html</string>
+  </URLs>
+  <Rules>
+    <Rule>
+      <Link BodyPattern="&lt;DIV class=cla2&gt;||&lt;ul class=&quot;pconline_page" LinkPattern="&lt;a href=&quot;||u&quot;" />
+      <OtherLink LinkPattern="&lt;a href='||u'&gt;下一页&lt;/a&gt;" />
+    </Rule>
+    <Rule>
+      <ArtGetItems>
+        <ArtItem Title="Title" IsMulti="false" IsSavePic="false">
+          <Pattern>&lt;title&gt;||&lt;/title&gt;</Pattern>
+        </ArtItem>
+        <ArtItem Title="Content" IsMulti="true" IsSavePic="true">
+          <Pattern>&lt;div id=eData*&gt;||&lt;script</Pattern>
+        </ArtItem>
+      </ArtGetItems>
+    </Rule>
+  </Rules>
+</Site>
